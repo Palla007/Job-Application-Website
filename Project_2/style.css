@@ -1,0 +1,84 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #ccc;
+}
+/* text keeping in the center */
+.continer{
+    max-width: 900px;
+    margin: 0 auto;
+}
+.applybox{
+    max-width: 600px;
+    padding: 20px;
+    background-color: white;
+    margin: 0 auto;
+    margin-top: 50px;
+    box-shadow: 4px 3px 5px rgb(1, 1, 1,0.1) ;
+    border-radius: 10px;
+}
+.title{
+    font-size: 20px ;
+}
+/* grid is used for allignment*/
+.form_continer{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px ,1fr));
+    /* gap between grid*/
+    gap: 20px;
+}
+.form_control{
+     display: flex;
+     /*firstname / enter your first name */
+     flex-direction: column;
+     margin-bottom: 10px;
+}
+label{
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+input,select,text{
+        padding: 6px 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 15px;
+}
+input:focus{
+    outline-color: red;
+}
+.button_continer{
+    /*by using flex and justify conetent we move apply button to end */
+    display: flex;
+    justify-content: end;
+}
+button{
+    background-color: red;
+    border: transparent solid 2px;
+    padding: 5px 10px;
+    color: white;
+    border-radius: 8px;
+    transition: 0.3s ease-in;
+} 
+/* button animation */
+button:hover{
+    background-color: #ccc;
+    border: red;
+    color: black;
+    transition: 0.3s ease-out;
+    cursor: pointer;
+}
+.textarea_control{
+    grid-column:1/span 2 ;
+}
+.textarea_control textarea{
+    width: 100%;
+}
+@media(max-width:460px){
+    .textarea_control{
+        grid-column:1/span 1;
+    } 
+}
